@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name = "publishers")
@@ -15,10 +14,10 @@ public class Publisher {
     private int id;
 
     private String name;
-    private  int establishmentYear;
+    private int establishmentYear;
     private String address;
 
-    @OneToMany(mappedBy = "publisher",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "publisher", cascade = CascadeType.ALL)
     private List<Book> books = new ArrayList<>();
 
     public Publisher() {

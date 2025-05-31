@@ -3,7 +3,6 @@ package Model;
 import jakarta.persistence.*;
 
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -12,7 +11,7 @@ public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "category_id" , unique = true)
+    @Column(name = "category_id", unique = true)
     private int id;
 
     @Column(name = "category_name", nullable = false)

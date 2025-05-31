@@ -16,7 +16,7 @@ public class Book {
     @Column(name = "book_id", unique = true)
     private int id;
 
-    @Column(name = "book_name" , nullable = false)
+    @Column(name = "book_name", nullable = false)
     private String name;
 
     @Column(name = "book_publication_year")
@@ -33,7 +33,7 @@ public class Book {
     @JoinColumn(name = "publisher_id")
     private Publisher publisher;
 
-    @ManyToMany(fetch = FetchType.LAZY,cascade = CascadeType.PERSIST)
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
     @JoinTable(
             name = "book_categories",
             joinColumns = @JoinColumn(name = "book_id"),

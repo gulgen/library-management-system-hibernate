@@ -2,7 +2,8 @@ package Model;
 
 import jakarta.persistence.*;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "authors")
@@ -70,11 +71,6 @@ public class Author {
 
     @Override
     public String toString() {
-        return "Author{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", birthDate=" + birthDate +
-                ", country='" + country + '\'' +
-                '}';
+        return "Author{" + "id=" + id + ", name='" + name + '\'' + ", birthDate=" + birthDate + ", country='" + country + '\'' + '}';
     }
 }
